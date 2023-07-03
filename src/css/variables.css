@@ -1,0 +1,12 @@
+:root {
+	--color-primary: #009FE3;
+	--color-gray-500: gray/500;
+	--color-text-disabled: #8E99AB;
+	--color-border: #EAECF0;
+	--color-base-white: #FFF;
+	--color-text-secondary: #1FC0AE;
+	--color-text-primary: #1B1B1B;
+	--color-input: #F9FAFB;
+	--color-milk: #F6F7FA;
+	--color-hover: #1FC0AE30;
+}

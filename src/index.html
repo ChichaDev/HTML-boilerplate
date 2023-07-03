@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <title>Steps Page</title>
+    <meta name="description" content="Order" />
+    <script defer src="js/dropdown.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Start</h1>
+      </header>
+      <nav>
+        <ul>
+          <li>
+            <a href="#"
+              ><img src="./img/home-line.jpg" alt="Головна" />Головна</a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img src="./img/bar-chart.jpg" alt="Сторінка 1" />Сторінка 1</a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img src="./img/layers-three.jpg" alt="Сторінка 2" />Сторінка
+              2</a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img src="./img/check-done.jpg" alt="Сторінка 3" />Сторінка 3</a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="./img/settings.jpg"
+                alt="Налаштування"
+              />Налаштування</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <main>
+        <section class="section-steps">
+          <div class="section-steps__card">
+            <div class="section-steps__icon"></div>
+            <p class="section-steps__description">Стан 1</p>
+          </div>
+          <img
+            class="section-steps__progress"
+            src="./img/Line.svg"
+            alt="прогрес-1"
+          />
+          <div class="section-steps__card">
+            <div class="section-steps__icon"></div>
+            <p class="section-steps__description">Стан 2</p>
+          </div>
+          <img
+            class="section-steps__progress"
+            src="./img/Line.svg"
+            alt="прогрес-2"
+          />
+          <div class="section-steps__card">
+            <div class="section-steps__icon notactive"></div>
+            <p class="section-steps__description">Стан 3</p>
+          </div>
+          <img
+            class="section-steps__progress"
+            src="./img/Line1.svg"
+            alt="прогрес-3"
+          />
+          <div class="section-steps__card">
+            <div class="section-steps__icon notactive"></div>
+            <p class="section-steps__description">Стан 4</p>
+          </div>
+          <img
+            class="section-steps__progress"
+            src="./img/Line1.svg"
+            alt="прогрес-4"
+          />
+          <div class="section-steps__card">
+            <div class="section-steps__icon notactive"></div>
+            <p class="section-steps__description">Стан 5</p>
+          </div>
+        </section>
+
+        <section class="section-info">
+          <article class="card-info left">
+            <h2 class="card-info__title">Information</h2>
+            <div class="card-info__contacts">
+              <p>
+                Info number: <span class="card-info__highlight">903049</span>
+              </p>
+              <p>
+                Pick up Place: <span class="card-info__highlight">Sweden</span>
+              </p>
+            </div>
+          </article>
+
+          <article class="card-info right">
+            <div class="card-info__div">
+              <h2 class="card-info__h2">We are here</h2>
+              <h3 class="card-info__h3">Long time to go</h3>
+            </div>
+            <div class="card-info__image">
+              <img src="./img/Truck.png" alt="Card Image" />
+            </div>
+          </article>
+        </section>
+
+        <section class="section-form">
+          <h2 class="section-form__title">Перезамовте багаж</h2>
+          <div class="select-container">
+            <label for="input">Дропдаун</label>
+            <div class="select">
+              <input
+                type="text"
+                id="input"
+                placeholder="Select option"
+                onfocus="this.blur();"
+              />
+            </div>
+            <div class="option-container">
+              <div class="option">
+                <label> Html </label>
+              </div>
+              <div class="option">
+                <label>CSS</label>
+              </div>
+              <div class="option">
+                <label>JavaScript</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="select-container">
+            <label for="input">Дропдаун</label>
+            <div class="select">
+              <input
+                type="text"
+                id="input"
+                placeholder="Select option"
+                onfocus="this.blur();"
+              />
+            </div>
+            <div class="option-container">
+              <div class="option">
+                <label> Html </label>
+              </div>
+              <div class="option">
+                <label>CSS</label>
+              </div>
+              <div class="option">
+                <label>JavaScript</label>
+              </div>
+              <div class="option">
+                <label>React</label>
+              </div>
+            </div>
+          </div>
+          <button class="section-form__button">Done</button>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

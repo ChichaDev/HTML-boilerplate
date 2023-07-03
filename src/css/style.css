@@ -1,0 +1,501 @@
+@font-face {
+  font-family: Philosopher;
+  src: local("Philosopher");
+  src: url("../fonts/Philosopher-Regular.ttf");
+}
+
+@font-face {
+  font-weight: 500;
+  font-family: "Roboto!";
+  font-style: normal;
+  src: local("Roboto");
+  src: url("../fonts/Roboto-Regular.eot");
+  src: url("../fonts/Roboto-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Roboto-Regular.woff") format("woff"),
+    url("../fonts/Roboto-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: "Roboto!";
+  font-style: normal;
+  src: url("../fonts/Roboto-Bold.eot");
+  src: url("../fonts/Roboto-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Roboto-Bold.woff") format("woff"),
+    url("../fonts/Roboto-Bold.ttf") format("truetype");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Roboto!";
+}
+
+body {
+  background-color: var(--color-milk);
+}
+
+.wrapper {
+  display: grid;
+  grid-template:
+    ". . header header" auto "nav nav main ." 1fr "nav nav main ." auto / 0 280px minmax(
+      32rem,
+      103.6rem
+    )
+    auto;
+  min-height: 100vh;
+}
+
+main {
+  grid-area: main;
+  margin-bottom: 3.7rem;
+  margin-left: 6.2rem;
+}
+
+header {
+  display: grid;
+  grid-area: header;
+  height: 7rem;
+  text-align: center;
+  border-bottom: 0.1rem solid var(--color-border);
+  place-items: center;
+}
+
+h1 {
+  color: var(--color-text-primary);
+  font-weight: 400;
+  font-size: 4.8rem;
+  font-family: "Roboto!";
+  font-style: normal;
+  line-height: 2rem;
+  text-align: center;
+}
+
+nav {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  grid-area: nav;
+  height: 100vh;
+  position: sticky;
+  background: var(--color-base-white);
+}
+
+nav ul {
+  display: grid;
+  grid-gap: 0.4rem;
+  grid-template-columns: 1fr;
+  padding-right: 1.6rem;
+  padding-left: 1.6rem;
+  text-align: left;
+  list-style-type: none;
+}
+
+nav ul li {
+  display: grid;
+  grid-template-columns: auto;
+  align-items: center;
+  width: 24.8rem;
+  height: 4rem;
+  margin-right: 10rem;
+}
+
+nav ul li:last-child {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+nav ul li:hover {
+  background: var(--color-hover);
+  border: none;
+  border-radius: 0.6rem;
+  cursor: pointer;
+}
+
+nav ul li a {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  padding: 0.8rem 1.2rem;
+  color: var(--color-text-primary);
+  font-weight: 600;
+  font-size: 1.6rem;
+  font-family: "Roboto!";
+  font-style: normal;
+  line-height: 2.4rem;
+  text-decoration: none;
+}
+
+nav li img {
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-right: 1rem;
+}
+
+.section-steps {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 1rem;
+  width: 100%;
+  height: 20.4rem;
+  padding-top: 4.8rem;
+  padding-right: 10rem;
+  padding-bottom: 4.8rem;
+}
+
+.section-steps__card {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.6rem;
+  align-content: center;
+  justify-items: center;
+  width: 7.2rem;
+  height: 10.8rem;
+  text-align: center;
+}
+
+.section-steps__icon {
+  width: 7.2rem;
+  height: 7.2rem;
+  background-color: var(--color-text-secondary);
+  border-radius: 50%;
+  box-shadow: 0 1px 2px 0 rgb(16 24 40 / 5%);
+}
+
+.notactive {
+  background-color: var(--color-border);
+}
+
+.section-steps__icon:last-child {
+  margin-right: 0;
+}
+
+.section-steps__description {
+  color: var(--color-text-primary);
+  font-weight: bold;
+  font-size: 1.4rem;
+  font-family: "Roboto!";
+  font-style: normal;
+  line-height: 2rem;
+  text-align: center;
+}
+
+.section-steps__progress {
+  grid-column: span 1;
+  width: 110%;
+  height: 1.4rem;
+  margin-top: 2.5rem;
+}
+
+.section-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2.2rem;
+}
+
+.card-info {
+  width: 100%;
+  height: 13.1rem;
+  background: var(--color-base-white);
+  border-radius: 1.2rem;
+  box-shadow: 0 0.1rem 0.2rem 0 rgb(16 24 40 / 5%);
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.card-info__title {
+  display: block;
+  padding-left: 1.7rem;
+  color: var(--color-text-primary);
+  font-weight: 500;
+  font-size: 2rem;
+  font-family: "Roboto!";
+  font-style: normal;
+  line-height: 2.7rem;
+}
+
+.card-info__contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  padding-right: 2.3rem;
+  padding-left: 1.7rem;
+  color: var(--color-text-primary);
+  font-weight: 500;
+  font-size: 1.6rem;
+  font-family: "Roboto!";
+  font-style: normal;
+  line-height: 2.4rem;
+}
+
+.card-info__contacts p {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-info__highlight {
+  color: var(--color-text-disabled);
+  font-weight: 500;
+  font-size: 1.6rem;
+  font-family: "Roboto!";
+  font-style: normal;
+  line-height: 2.4rem;
+}
+
+.card-info__div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.card-info__h2 {
+  color: var(--color-text-secondary);
+  font-weight: 800;
+  font-size: 2.4rem;
+  font-family: "Roboto!";
+  font-style: normal;
+  line-height: 3.3rem;
+}
+
+.card-info__h3 {
+  color: var(--color-text-secondary);
+  font-weight: 400;
+  font-size: 1.4rem;
+  font-family: "Roboto!";
+  font-style: normal;
+  line-height: 2.4rem;
+  text-align: center;
+}
+
+.card-info__image {
+  width: 10.1rem;
+  height: 7.1rem;
+}
+
+.section-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  height: 29.5rem;
+  margin-top: 20px;
+  background-color: var(--color-base-white);
+}
+
+.section-form__title {
+  padding-left: 1.1rem;
+  color: var(--color-text-primary);
+  font-weight: 500;
+  font-size: 2rem;
+  font-family: "Roboto!";
+  font-style: normal;
+  line-height: 2.7rem;
+}
+
+.select-container {
+  position: relative;
+  width: 100%;
+  padding: 0.8rem 1.2rem;
+}
+
+.select-container label {
+  color: #8e99ab;
+  font-weight: 400;
+  font-size: 1.2rem;
+  font-family: "Roboto!";
+  font-style: normal;
+  line-height: 2.4rem;
+}
+
+.select-container .select {
+  position: relative;
+  width: 100%;
+  height: 4rem;
+  background: var(--color-input);
+  border-radius: 0.8rem;
+  box-shadow: 0.2rem 0.2rem 0.5rem rgb(0 0 0 / 70%);
+}
+
+.select-container .select::after {
+  position: absolute;
+  top: 50%;
+  right: 1.5rem;
+  width: 1rem;
+  height: 1rem;
+  border-right: 0.2rem solid gray;
+  border-bottom: 0.2rem solid gray;
+  transform: translateY(-50%) rotate(45deg);
+  cursor: pointer;
+  transition: border-color 0.4s;
+  content: "";
+}
+
+.select-container.active .select::after {
+  border: none;
+  border-top: 0.2rem solid white;
+  border-left: 0.2rem solid white;
+}
+
+.select-container .select input {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0 1.5rem;
+  color: var(--color-text-primary);
+  font-size: 1.4rem;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.select-container .option-container {
+  position: absolute;
+  top: 100%;
+  z-index: 1;
+  width: 98%;
+  height: 0;
+  overflow-y: scroll;
+  background: #6e6477;
+  transition: 0.4s;
+}
+
+.select-container.active .option-container {
+  width: 98%;
+  height: 6rem;
+  max-height: 20rem;
+}
+
+.select-container .option-container::-webkit-scrollbar {
+  width: 1rem;
+  border-left: 0.1rem solid rgb(0 0 0 / 20%);
+}
+
+.select-container .option-container::-webkit-scrollbar-thumb {
+  background: #0f0e11;
+}
+
+.select-container .option-container .option {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 2rem;
+  padding-left: 1.5rem;
+  border-top: 0.1rem solid rgb(0 0 0 / 30%);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.select-container .option-container .option.selected {
+  background: rgb(0 0 0 / 50%);
+  pointer-events: none;
+}
+
+.select-container .option-container .option:hover {
+  padding-left: 2rem;
+  background: rgb(0 0 0 / 20%);
+}
+
+.select-container .option-container .option label {
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.section-form__button {
+  display: flex;
+  display: block;
+  gap: 0.8rem;
+  align-items: center;
+  justify-content: center;
+  width: 8.8rem;
+  margin-top: 5.2rem;
+  margin-left: auto;
+  padding: 1rem 1.6rem;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.4rem;
+  font-family: "Roboto!";
+  font-style: normal;
+  line-height: 2rem;
+  background: #1fc0ae;
+  border: none;
+  border-radius: 0.8rem;
+}
+
+.section-form__button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.section-form__button:active {
+  background-color: #0e7a6e;
+  transform: scale(0.95);
+  opacity: 1;
+}
+
+@media (width <= 768px) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .wrapper {
+    grid-template-areas:
+      "header"
+      "nav"
+      "main";
+    grid-template-columns: minmax(320px, 1fr);
+  }
+
+  nav {
+    display: none;
+  }
+
+  .section-info {
+    grid-template-columns: 1fr;
+  }
+
+  main {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+
+@media (width >= 768px) and (width <= 1024px) {
+  html {
+    font-size: 50%;
+  }
+
+  .section-info {
+    grid-template-columns: 1fr;
+  }
+
+  main {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+
+@media (width >= 1800px) {
+  html {
+    font-size: 75%;
+  }
+}
